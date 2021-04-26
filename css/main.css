@@ -19,7 +19,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #FFFFFF;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.87);
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -50,22 +50,39 @@ ul {
   margin: 0 auto;
 }
 
-.txt_1 {
+.txt_logo {
   font-size: 22px;
   line-height: 24px;
   font-weight: 400;
+  color: #5f6368;
 }
 
-.txt_2 {
+.txt_nav {
   font-size: 15px;
   line-height: 21px;
   font-weight: 500;
+  color: #5f6368;
 }
 
-.txt_3 {
+.txt_question {
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
+  color: #3c4043;
+}
+
+.txt_sub_title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #3c4043;
+}
+
+.txt_footer {
+  font-size: 11px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(61, 61, 61, 0.8);
 }
 
 /**********************************
@@ -87,21 +104,39 @@ header .head_nav li {
 }
 header ul {
   display: flex;
+  align-items: center;
 }
 
 /**********************************
  * MAIN
  * section
  */
-.question, .answer {
-  padding: 20px 0;
+.question {
+  padding: 80px 0 10px;
 }
 
 .paragraph {
   padding: 15px 0;
 }
 
+.sub_title {
+  padding: 30px 0 10px;
+}
+
 /**********************************
  * FOOTER
  * section
  */
+footer {
+  height: 45px;
+  background-color: #F5F5F5;
+  margin-top: 30px;
+}
+footer .footer_left ul {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+footer .footer_left ul li {
+  padding-right: 10px;
+}

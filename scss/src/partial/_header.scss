@@ -2,6 +2,7 @@
  * HEADER
  * section
  */
+ 
 header {
 	padding: 20px 0 0 20px;
 	border-bottom: 1px solid $grey;
@@ -15,6 +16,6 @@ header {
 		}
 	}
 	ul {
-		display: flex;
+		@include flex-row-cv; 
 	}
 }

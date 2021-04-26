@@ -2,3 +2,18 @@
  * FOOTER
  * section
  */
+
+footer {
+	height: 45px;
+	background-color: $grey2;
+	margin-top: 30px;
+	.footer_left {
+		ul {
+			@include flex-row-cv; 
+			padding: 10px 0;
+			li {
+				padding-right: 10px;
+			}
+		}
+	}
+}

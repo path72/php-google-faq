@@ -12,7 +12,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: $white;
-	color: $black;
+	color: $black2;
 	font-size: 14px;
 	line-height: 24px;
 	font-weight: 400;
@@ -39,20 +39,35 @@ ul {
 }
 
 // % TEXTS % 
-.txt_1 {
+.txt_logo {
 	font-size: 22px;
 	line-height: 24px;
 	font-weight: 400;
+	color: $black4;
 }
-.txt_2 {
+.txt_nav {
 	font-size: 15px;
 	line-height: 21px;
 	font-weight: 500;
+	color: $black4;
 }
-.txt_3 {
+.txt_question {
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: 500;
+	color: $black3;
+}
+.txt_sub_title {
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 500;
+	color: $black3;
+}
+.txt_footer {
+	font-size: 11px;
+	line-height: 24px;
+	font-weight: 300;
+	color: rgba(61, 61, 61, 0.8);
 }
 // .txt_title {
 // 	font-size: 26px;
