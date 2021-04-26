@@ -1,0 +1,20 @@
+/**********************************
+ * HEADER
+ * section
+ */
+header {
+	padding: 20px 0 0 20px;
+	border-bottom: 1px solid $grey;
+	.head_top {
+		height: 44px;
+	}
+	.head_nav {
+		height: 30px;
+		li {
+			margin-right: 45px;
+		}
+	}
+	ul {
+		display: flex;
+	}
+}

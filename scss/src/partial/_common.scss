@@ -1,0 +1,87 @@
+/**********************************
+ * COMMON
+ * utility
+ */
+
+// % PROLEGOMENA % 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: $white;
+	color: $black;
+	font-size: 14px;
+}
+a {
+	color: $black;
+	text-decoration: none;
+	transition: all .2s ease;
+	// &:hover {
+	// 	color: $blue;
+	// }
+}
+ul {
+	list-style: none;
+}
+.wrapper {
+	margin: 0 auto;
+	&.w1 { width: 1150px; }
+	&.w2 { width: 1550px; }
+}
+.wrapper60 {
+	width: 60%;
+	margin: 0 auto;
+}
+
+// % TEXTS % 
+.txt_1 {
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+}
+.txt_2 {
+	font-size: 15px;
+	line-height: 21px;
+	font-weight: 500;
+}
+// .txt_title {
+// 	font-size: 26px;
+// 	line-height: 36px;
+// 	font-weight: 700;
+// }
+// .txt_sub_title {
+// 	font-size: 22px;
+// 	font-weight: 400;
+// }
+// .txt_fas {
+// 	font-size: 18px;
+// 	font-weight: 900;
+// }
+// .txt_footer_title {
+// 	font-size: 18px;
+// 	line-height: 23px;
+// 	font-weight: 700;
+// }
+// .txt_caption {
+// 	font-size: 18px;
+// 	font-weight: 400;
+// }
+// .txt_nav {
+// 	font-size: 14px;
+// 	font-weight: 700;
+// }
+// .txt_link {
+// 	font-size: 14px;
+// 	font-weight: 400;
+// }
+// .txt_btn_or {
+// 	font-size: 13px;
+// 	font-weight: 400;
+// }
+// .txt_role {
+// 	font-size: 12px;
+// 	font-weight: 400;
+// }
