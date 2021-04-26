@@ -160,6 +160,7 @@
 				<div class="footer_right">
 					<i class="fas fa-comment-alt"></i>
 					<select name="" id="">
+						<option value="">Lingua Nera di Mordor</option>
 						<option value="">English</option>
 					</select>
 				</div>

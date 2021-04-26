@@ -189,4 +189,5 @@ footer .footer_row .footer_right .fas {
 }
 footer .footer_row .footer_right select {
   width: 180px;
+  margin-left: 5px;
 }
