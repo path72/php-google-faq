@@ -103,6 +103,14 @@ header .head_top {
   height: 44px;
   margin-bottom: 5px;
 }
+header .head_top .logo {
+  display: flex;
+  align-items: center;
+}
+header .head_top .logo img {
+  height: 40px;
+  margin-right: 5px;
+}
 header .head_top .icons {
   display: flex;
   align-items: center;

@@ -95,7 +95,10 @@
 
 		<header>
 			<div class="head_top">
-				<div class="logo txt_logo">Google Privacy & Terms</div>
+				<div class="logo txt_logo">
+					<img src="img/Sauron-logo.png" alt="">
+					<div class="title">Privacy & Terms</div>
+				</div>
 				<div class="icons">
 					<img src="img/app.png" alt="">
 					<img src="img/mr.g.png" alt="">
@@ -139,11 +142,11 @@
 											<p class="<?php echo $class ?>"><?php echo trim($par); ?></p>
 										<?php 
 									}
-								}
+								} // <!-- php: foreach $par_list -->
 							?>
 						</div> <!-- answer -->
 					</div> <!-- faq_block -->
-				<?php } ?> <!-- php: foreach -->
+				<?php } ?> <!-- php: foreach $data -->
 			</div> <!-- wrapper60 -->
 		</main>
 
@@ -160,7 +163,7 @@
 				<div class="footer_right">
 					<i class="fas fa-comment-alt"></i>
 					<select name="" id="">
-						<option value="">Lingua Nera di Mordor</option>
+						<option value="">Mordor Black Speech</option>
 						<option value="">English</option>
 					</select>
 				</div>
