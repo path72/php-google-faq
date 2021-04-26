@@ -14,6 +14,8 @@ body {
 	background-color: $white;
 	color: $black;
 	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
 }
 a {
 	color: $black;
@@ -45,6 +47,11 @@ ul {
 .txt_2 {
 	font-size: 15px;
 	line-height: 21px;
+	font-weight: 500;
+}
+.txt_3 {
+	font-size: 24px;
+	line-height: 32px;
 	font-weight: 500;
 }
 // .txt_title {

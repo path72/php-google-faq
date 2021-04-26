@@ -26,7 +26,7 @@
 		<!-- <script type="text/javascript" src="js/main.js"></script> -->
 		<!-- *** *** -->
 		<link rel="shortcut icon" href="#">
-		<title>template</title>
+		<title>php-google-faq</title>
 	</head>
 	<body>
 
@@ -53,7 +53,7 @@
 						We know security and privacy are important to you – and they are important to us, too. We make it a priority to provide strong security and give you confidence that your information is safe and accessible when you need it.||
 						We’re constantly working to ensure strong security, protect your privacy, and make Google even more effective and efficient for you. We spend hundreds of millions of dollars every year on security, and employ world-renowned experts in data security to keep your information safe. We also built easy-to-use privacy and security tools like Google Dashboard, 2-step verification and Ads Settings. So when it comes to the information you share with Google, you’re in control.||					
 						You can learn more about safety and security online, including how to protect yourself and your family online, at the Google Safety Center.||					
-						Learn more about how we keep your personal information private and safe — and put you in control.||				
+						Learn more about how we keep your personal information private and safe — and put you in control.||		
 					",
 					"sub_title" => "",
 					"sub_answer" => "",
@@ -66,7 +66,7 @@
 						a. Google Ireland Limited, if you’re located in the European Economic Area (EU countries plus Iceland, Liechtenstein, and Norway) or Switzerland||
 						b. Google LLC, based in the United States, for the rest of the world||
 						2. The version of the terms that govern our relationship, which can vary depending on local laws||
-						Keep in mind that Google services are essentially the same regardless of the affiliate that provides the services or your country association.
+						Keep in mind that Google services are essentially the same regardless of the affiliate that provides the services or your country association.||
 					",
 					"sub_title" => "Determining the country associated with your account",
 					"sub_answer" => "
@@ -114,18 +114,39 @@
 		<main>
 			<div class="wrapper60">
 
+				<?php foreach ($data as $key => $item) { ?>
 
-			<?php
-				foreach ($data as $key => $item) {
-					echo $item['question'].'<br><br>';
-					echo $item['answer'].'<br><br><br><br>';
+					<div class="faq_block">
+						<div class="question txt_3">
+							<?php echo $item['question']; ?>
+						</div>
+						<div class="answer">
+							<?php 
+								$ans = $item['answer'];
+								if (strpos($ans,'||')) {
+									$par_list = explode('||',$ans);
+								} else {
+									$par_list = [$ans];
+								}
+								foreach ($par_list as $par) {
+									if (trim($par) != '') {
+										?>
+											<p class="paragraph"><?php echo trim($par); ?>###########</p>
+										<?php 
+									}
+								}
+							?>
+						</div>
+					</div>
 
-				}
-			?>
+				<?php } ?>
 
 			</div>
 
 		</main>
+
+
+
 
 		<footer>
 
