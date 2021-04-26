@@ -7,12 +7,24 @@ footer {
 	height: 45px;
 	background-color: $grey2;
 	margin-top: 30px;
-	.footer_left {
-		ul {
-			@include flex-row-cv; 
-			padding: 10px 0;
-			li {
-				padding-right: 10px;
+	.footer_row {
+		@include flex-row-cv;
+		@include fx-row-between;
+		.footer_left {
+			ul {
+				@include flex-row-cv; 
+				padding: 10px 0;
+				li {
+					padding-right: 10px;
+				}
+			}
+		}
+		.footer_right {
+			.fas {
+				color: $blue;
+			}
+			select {
+				width: 180px;
 			}
 		}
 	}

@@ -90,37 +90,76 @@ ul {
  * section
  */
 header {
-  padding: 20px 0 0 20px;
+  position: fixed;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 10px 20px 0;
   border-bottom: 1px solid #CCCCCC;
 }
 header .head_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 44px;
+  margin-bottom: 5px;
+}
+header .head_top .icons {
+  display: flex;
+  align-items: center;
+}
+header .head_top .icons img {
+  margin-left: 20px;
+}
+header .head_top .icons img:last-child {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+header .head_top .icons img:first-child {
+  width: 20px;
+  height: 20px;
 }
 header .head_nav {
   height: 30px;
 }
-header .head_nav li {
-  margin-right: 45px;
-}
-header ul {
+header .head_nav ul {
   display: flex;
   align-items: center;
+}
+header .head_nav ul li {
+  margin-right: 45px;
+}
+header .head_nav ul li.selected {
+  color: #3367d6;
+  font-size: 500;
+  padding-bottom: 7px;
+  border-bottom: 3px solid #3367d6;
 }
 
 /**********************************
  * MAIN
  * section
  */
-.question {
+main {
+  padding-top: 90px;
+}
+main .question {
   padding: 80px 0 10px;
 }
-
-.paragraph {
+main .paragraph {
   padding: 15px 0;
 }
-
-.sub_title {
+main .sub_title {
   padding: 30px 0 10px;
+}
+main ol {
+  padding-left: 15px;
+}
+main ol li {
+  padding: 10px;
+}
+main ol.alpha_list {
+  list-style-type: lower-alpha;
 }
 
 /**********************************
@@ -132,11 +171,22 @@ footer {
   background-color: #F5F5F5;
   margin-top: 30px;
 }
-footer .footer_left ul {
+footer .footer_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer_row .footer_left ul {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
-footer .footer_left ul li {
+footer .footer_row .footer_left ul li {
   padding-right: 10px;
+}
+footer .footer_row .footer_right .fas {
+  color: #3367d6;
+}
+footer .footer_row .footer_right select {
+  width: 180px;
 }

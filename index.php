@@ -7,23 +7,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 		<!-- *** [ FONT AWESOME ] *** -->
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 		<!-- *** [ MY CSS ] *** -->
-		<!-- <link rel="stylesheet" href="css/master.css"> -->
 		<link rel="stylesheet" href="css/main.css">
-		<!-- *** [ JQUERY - Google CDN ] *** -->
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-		<!-- *** [ Vue.js ] *** -->
-		<!-- development -->
-		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-		<!-- production -->
-		<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
-		<!-- prototyping or learning purposes -->
-		<!-- <script src="https://unpkg.com/vue@next"></script> -->
-		<!-- *** [ AXIOS (after Vue.js) ] *** -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-		<!-- *** [ MY JS - (jQuery doc ready) ] *** -->
-		<!-- <script type="text/javascript" src="js/main.js"></script> -->
 		<!-- *** *** -->
 		<link rel="shortcut icon" href="#">
 		<title>php-google-faq</title>
@@ -62,13 +48,25 @@
 						Why is my account associated with a country?
 					",
 					"answer" => "
-						Your account is associated with a country (or territory) in the Terms of Service so that we can determine two things:||
-						1. The Google affiliate that provides the services, that processes your information, and that is responsible for complying with applicable privacy laws. Generally, Google offers its consumer services through either of two companies:||
-						a. Google Ireland Limited, if you’re located in the European Economic Area (EU countries plus Iceland, Liechtenstein, and Norway) or Switzerland||
-						b. Google LLC, based in the United States, for the rest of the world||
-						2. The version of the terms that govern our relationship, which can vary depending on local laws||
+						Your account is associated with a country (or territory) in the Terms of Service so that we can determine two things:
+						<ol>
+							<li>
+								The Google affiliate that provides the services, that processes your information, and that is responsible for complying with applicable privacy laws. Generally, Google offers its consumer services through either of two companies:
+								<ol class='alpha_list'>
+									<li>
+										Google Ireland Limited, if you’re located in the European Economic Area (EU countries plus Iceland, Liechtenstein, and Norway) or Switzerland
+									</li>
+									<li>
+										Google LLC, based in the United States, for the rest of the world
+									</li>
+								</ol>
+							</li>
+							<li>
+								The version of the terms that govern our relationship, which can vary depending on local laws
+							</li>
+						</ol>
 						Keep in mind that Google services are essentially the same regardless of the affiliate that provides the services or your country association.||
-						##Determining the country associated with your account||
+						&&Determining the country associated with your account||
 						When you create a new account, we associate your account with a country based on where you created your Google Account. For accounts at least a year old, we use the country from which you usually access Google services — typically where you’ve spent the most time in the last year.||
 						Frequent travel doesn’t generally affect the country associated with your account. If you move to a new country, it can take about a year for your country association to update.||
 						If the country associated with your account doesn’t correspond to your country of residence, it could be because of a difference between your country of work and residence, because you’ve installed a Virtual Private Network (VPN) to mask your IP address, or because you live close to a territorial border. Contact us if you think your country association is wrong.||
@@ -98,6 +96,10 @@
 		<header>
 			<div class="head_top">
 				<div class="logo txt_logo">Google Privacy & Terms</div>
+				<div class="icons">
+					<img src="img/app.png" alt="">
+					<img src="img/mr.g.png" alt="">
+				</div>
 			</div>
 			<div class="head_nav txt_nav">
 				<ul>
@@ -105,16 +107,14 @@
 					<li>Privacy Policy</li>
 					<li>Terms of Service</li>
 					<li>Technologies</li>
-					<li>FAQ</li>
+					<li class="selected">FAQ</li>
 				</ul>
 			</div>
 		</header>
 
 		<main>
 			<div class="wrapper60">
-
 				<?php foreach ($data as $key => $item) { ?>
-
 					<div class="faq_block">
 						<div class="question txt_question">
 							<?php echo $item['question']; ?>
@@ -128,14 +128,12 @@
 									$par_list = [$ans];
 								}
 								foreach ($par_list as $par) {
-									$par = trim($par);
-									if ($par != '') {
-										if (strpos($par,'##')) {
-											$par = str_replace('##','',$par);
-											$class = 'sub_title txt_sub_title';									 
+									if (trim($par) != '') {
+										if (strpos($par,'&&')) {
+											$par = str_replace('&&','',$par);
+											$class = 'sub_title txt_sub_title';			 
 										} else {
 											$class = 'paragraph';
-											// if () {}
 										}
 										?>
 											<p class="<?php echo $class ?>"><?php echo trim($par); ?></p>
@@ -143,18 +141,14 @@
 									}
 								}
 							?>
-						</div>
-					</div>
-
-				<?php } ?>
-
-			</div>
-
+						</div> <!-- answer -->
+					</div> <!-- faq_block -->
+				<?php } ?> <!-- php: foreach -->
+			</div> <!-- wrapper60 -->
 		</main>
 
-
 		<footer>
-			<div class="wrapper60">
+			<div class="footer_row wrapper60">
 				<div class="footer_left txt_footer">
 					<ul>
 						<li>Google &middot;</li>
@@ -163,17 +157,14 @@
 						<li>Terms</li>
 					</ul>
 				</div>
-				<div class="footer_right"></div>
+				<div class="footer_right">
+					<i class="fas fa-comment-alt"></i>
+					<select name="" id="">
+						<option value="">English</option>
+					</select>
+				</div>
 			</div>
 		</footer>
 
-
-		<div id="app">
-
-		</div> <!-- Vue.js main instance #app -->
-
-
-		<!-- *** [ MY JS ] *** -->
-		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

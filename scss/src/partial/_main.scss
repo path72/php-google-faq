@@ -3,18 +3,25 @@
  * section
  */
 
-.question {
-	padding: 80px 0 10px;
-	// border: 1px dashed red;
+main {
+	padding-top: 90px;
+	.question {
+		padding: 80px 0 10px;
+	}
+	.paragraph {
+		padding: 15px 0;
+	}
+	.sub_title {
+		padding: 30px 0 10px;
+	}
+	ol {
+		padding-left: 15px;
+		li {
+			padding: 10px;
+		}
+		&.alpha_list {
+			list-style-type: lower-alpha;
+		}
+	}
 }
-// .answer {
-// 	padding: 20px 0;
-// }
-.paragraph {
-	padding: 15px 0;
-	// color: green;
-}
-.sub_title {
-	padding: 30px 0 10px;
-	// color: red;
-}
+

@@ -2,20 +2,47 @@
  * HEADER
  * section
  */
- 
+
 header {
-	padding: 20px 0 0 20px;
+	position: fixed;
+	width: 100%;
+	background-color: $white;
+	padding: 10px 20px 0;
 	border-bottom: 1px solid $grey;
 	.head_top {
+		@include flex-row-cv;
+		@include fx-row-between;
 		height: 44px;
+		margin-bottom: 5px;
+		.icons {
+			@include flex-row-cv;
+			img {
+				margin-left: 20px;
+				&:last-child {
+					width: 32px;
+					height: 32px;
+					border-radius: 50%;
+				}
+				&:first-child {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
 	}
 	.head_nav {
 		height: 30px;
-		li {
-			margin-right: 45px;
+		ul {
+			@include flex-row-cv; 
+			li {
+				margin-right: 45px;
+				&.selected {
+					color: $blue;
+					font-size: 500;
+					padding-bottom: 7px;
+					border-bottom: 3px solid $blue;
+				}
+			}
 		}
-	}
-	ul {
-		@include flex-row-cv; 
 	}
 }
