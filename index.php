@@ -32,7 +32,7 @@
 						When you search for a name, you may see a notice that says that results may have been modified in accordance with data protection law in Europe. We’re showing this notice in Europe when a user searches for most names, not just pages that have been affected by a removal.||
 					"
 				],
-				'privacy' => [
+				"privacy" => [
 					"question" => "
 						How does Google protect my privacy and keep my information secure?
 					",
@@ -43,7 +43,7 @@
 						Learn more about how we keep your personal information private and safe — and put you in control.||		
 					"
 				],
-				'country' => [
+				"country" => [
 					"question" => "
 						Why is my account associated with a country?
 					",
@@ -72,7 +72,7 @@
 						If the country associated with your account doesn’t correspond to your country of residence, it could be because of a difference between your country of work and residence, because you’ve installed a Virtual Private Network (VPN) to mask your IP address, or because you live close to a territorial border. Contact us if you think your country association is wrong.||
 					"
 				],
-				'remove' => [
+				"remove" => [
 					"question" => "
 						How can I remove information about myself from Google's search results?
 					",
@@ -80,7 +80,7 @@
 						Google search results are a reflection of the content publicly available on the web. Search engines can't remove content directly from websites, so removing search results from Google wouldn't remove the content from the web. If you want to remove something from the web, you should contact the webmaster of the site the content is posted on and ask him or her to make a change. Additionally, if under European data protection law, you would like to request removal of certain information about you that appears in Google's search results, please click here. Once the content has been removed and Google has noted the update, the information will no longer appear in Google's search results. If you have an urgent removal request, you can also visit our help page for more information.||
 					"
 				],
-				'websites' => [
+				"websites" => [
 					"question" => "
 						Are my search queries sent to websites when I click on Google Search results?
 					",
